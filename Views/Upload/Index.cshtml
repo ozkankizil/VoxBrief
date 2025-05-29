@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Ses Dosyası Yükle";
+}
+
+@if (ViewBag.Transcript != null)
+{
+    <h4>Transkript</h4>
+    <textarea class="form-control" rows="10">@ViewBag.Transcript</textarea>
+}
+
+@if (ViewBag.FixedTranscript != null)
+{
+    <div class="mt-4">
+        <h5>Düzenlenmiş Transkript (AI)</h5>
+        <textarea class="form-control" rows="10">@ViewBag.FixedTranscript</textarea>
+    </div>
+}
+
+
+<h2>Ses Dosyası Yükle</h2>
+
+<form asp-controller="Upload" asp-action="UploadAudio" method="post" enctype="multipart/form-data">
+    <input type="file" name="audioFile" accept=".mp3,.wav" />
+    <button type="submit" class="btn btn-primary">Yükle</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+
+    @if (ViewBag.FileName != null)
+    {
+        <audio controls>
+            <source src="~/Uploads/@ViewBag.FileName" type="audio/mpeg">
+            Tarayıcınız ses oynatmayı desteklemiyor.
+        </audio>
+    }
+}

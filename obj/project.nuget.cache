@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4CPhivzdbW4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ozkan.kizil\\source\\repos\\VoxBrief\\VoxBrief\\VoxBrief.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ozkan.kizil\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\ozkan.kizil\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
